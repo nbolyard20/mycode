@@ -1,0 +1,25 @@
+---
+- name: How to print with debug
+  hosts: localhost
+  gather_facts: no
+
+  vars:
+          vendorip: '192.168.22.55'
+  tasks:
+          - name: Print to the screen
+            debug:
+                    msg: "Welcome to Ansible"
+
+          - name: Print message variable
+            debug:
+                    msg: "The vendor IP is: {{ vendorip }}"
+                    #note that recall wihtin the msg paramater requires curly braces
+          - name: Print just a variable
+            debug:
+                    var: vendorip
+                    # note that recall within var does not require curly braces
+          - name: Print only with verbosity
+            debug:
+                    var: vendorip
+                    verbosity: 3
+
