@@ -1,4 +1,4 @@
 ---
 # vars file for /home/student/mycode/ansiblelabs/lab29/roles/precheck
 switchint: 14
-switchver: 4.20
+switchver: "4.22"
